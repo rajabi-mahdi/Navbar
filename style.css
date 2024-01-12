@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(210, 36%, 96%);
+    font-family: sans-serif;
+}
+
+.icon {
+    display: none;
+}
+
+.menu {
+    transition: 500ms all ease-in-out;
+}
+
+.burger, .icon .fa-brands {
+    transition: 500ms all linear;
+    transform: rotate(0deg);
+}
+
+.burger:hover, .icon .fa-brands:hover {
+    transform: rotate(360deg) scale(1.5);
+}
+
+.nav {
+    box-shadow: 2px 2px 10px #dadada;
+    background: #ffffff;
+}
+
+.nav_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo_img, .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile_menu span {
+    font-size: 20px;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav_header {
+        width: 90%;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .burger span {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .menu {
+        width: 100%;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .show-nav {
+        height: 150px;
+    }
+
+    .menu_cat {
+        width: 100%;
+    }
+
+    .menu_list {
+        list-style-type: none;
+    }
+
+    .menu_item {
+        width: 100%;
+        padding: 7px 30px;
+        display: block;
+        color: #666;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    .menu_item:hover {
+        padding-left: 2.5rem;
+        background: deepskyblue;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .icon {
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav_content {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .nav_header {
+        width: fit-content;
+        margin: 10px 0;
+    }
+
+    .menu_cat {
+        display: flex;
+    }
+
+    .menu_list {
+        list-style-type: none;
+        margin: 0 5px;
+    }
+
+    .menu_item {
+        padding: 10px 7px;
+        display: block;
+        color: #888;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: 400ms;
+    }
+
+    .menu_item:hover {
+        color: #1390e1;
+    }
+
+    .icon {
+        display: flex;
+        padding: 10px;
+    }
+
+    .icon > span {
+        cursor: pointer;
+        color: hsl(205, 78%, 60%);
+        padding: 0 7px;
+        display: block;
+    }
+
+    .icon > span:hover {
+        opacity: .8;
+    }
+}
